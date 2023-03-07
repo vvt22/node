@@ -13,5 +13,5 @@ readStream.on("data", (chunk) => {
   writeStream.write(chunk);
 });
 
-// piping
+// piping(must be from a readablestream to writablestream)
 // readStream.pipe(writeStream);
