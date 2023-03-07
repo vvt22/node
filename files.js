@@ -15,7 +15,7 @@ fs.readFile("./docs/blog.txt", (err, data) => {
 fs.writeFile("./docs/blog.txt", "hello, world", () => {
   console.log("file was written");
 });
-
+// if doesnot exist a file
 fs.writeFile("./docs/blog2.txt", "hello, again", () => {
   console.log("file was written");
 });
