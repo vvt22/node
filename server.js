@@ -16,3 +16,6 @@ server.listen(3000, "localhost", () => {
 //
 //
 // run this file to listen to request been made
+// ater typing the address in the bar
+// you'll see the page as loading
+// but actually it is running in the background
