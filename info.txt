@@ -1,0 +1,14 @@
+NPM IS THE TOOL WE CAN USE TO INSTALL,UPDATE OR REMOVE NODE PACKAGES 
+If you didn't find   "package-lock.json" file you can update it using this command:
+npm install --package-lock-only
+
+nodemon is live reload server
+PACKAGE fle is json file and keep track of any package we install locally to our project
+To create it use:npm init
+
+lodash is having many related methods
+to use it:npm install lodash
+and require('lodash')
+
+npm allows us to easily share our project
+just use npm install 
