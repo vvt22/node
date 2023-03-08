@@ -1,0 +1,12 @@
+REQUESTS: GET POST DELETE PUT.
+
+POST REQUEST TYPE:-
+BY USING FORM METHOD LIKE : action, name attribute 
+FOR  ?app:54        TO GET PARAMETER VALUE ;        ?app:12  is very important
+
+
+ROUTE PARAMETER:-
+the changeable part of route DENOTED BY :id 
+
+
+CHECK OUT APP.JS AND DETAILS.EJS FOR POST and DELETE request type 
