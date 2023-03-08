@@ -1,0 +1,24 @@
+MONGODB ATLAS:- IS CLOUD DATABASE ALREADY HOSTED FOR US 
+//firstly create a cluster;then click on collection option and create a database
+//create a user from database-access
+//connect your application(generates a stringurl(use it in app.js))
+//replace the generated stringurl(3)
+
+MONGOOSE IS ODM LIBRARY (OBJECT DOCUMENT MAPPING)
+HAS SCHEMAS and MODELS
+SCHEMA DEFINES THE STRUCTURE OF TYPE OF DATA  
+MODELS ALLOWS US TO COMMUNICATE WITH DATABASE COLLECTION
+//create a model based on a schema
+
+
+Connect to database using mongoose
+use :npm install mongoose    and     const mongoose=require('mongoose')
+connect as :mongoose.connect('generatedstr')
+//connect is a asynchronous task and returns a promise              ?app:12
+create a schema                                ?modes/blog  1to17
+create a model
+//use in app.js                                ?app:28
+//save and find methods are asynchronous task
+
+
+FINALLY OUTPUTTING DOCUMENTS IN THE VIEW                  ?app:from72
