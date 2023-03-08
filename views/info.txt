@@ -1,0 +1,40 @@
+EJS TEMPLATES ARE PROCESSED THROUGH EJS VIEW ENGINE ON SERVER
+EJS->EJS VIEW ENGINE->HTML (SERVER SIDE RENDERING)
+
+
+We need a place to create our views.
+// By default express and ejs will check in views folder (default value)
+// if you want another one
+// use:app.set('views','myviews')
+// just .ejs as extension
+//
+// Also use RENDER instead of sendfile like   :render('index')
+
+
+
+PASSING DATA INTO VIEWS
+TAGS ARE Like :<%  %>
+ex:<p><%= name %></p>   //= is used as it is only one to be outputted 
+ex:
+also can send parameter(is just a object) in render method 
+res.render('index',{title:'Home'})
+// this object is passed into index.ejs file 
+and we can access it as :
+<title>NET NINJA    <%= title%>     </title>
+YOU CAN PASS ANYTHING LIKE : A OBJECT  //CHECK IN app.js file
+
+WORKING WITH EJS:
+1...<% if(blogs.length > 0){%>
+2...<% } %>
+3...<p class="title">  <%=blogs.snippet %>   </p>
+4...<%  } else { %>
+
+
+
+//PARTIALS :-
+
+parts of template which could be reused in different views
+//check partials folder
+used as :
+<%- include('relativepath')%>
+here we have used - sign as = sign escapes special character and we end up with string value

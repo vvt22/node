@@ -1,4 +1,11 @@
-const express = require('express');
+// EXPLAINATION
+// till now we're serving only static file
+// now we'll be outputting dynamic content
+// so we use a VIEW ENGINE(allows us to inject dynamic data logic)
+// SO we are using EJS
+// :npm install ejs
+
+const express = require("express");
 
 // express app
 const app = express();
@@ -6,28 +13,37 @@ const app = express();
 // listen for requests
 app.listen(3000);
 
-// register view engine
-app.set('view engine', 'ejs');
+// REGISTER VIEW ENGINE
+app.set("view engine", "ejs");
 // app.set('views', 'myviews');
 
-app.get('/', (req, res) => {
+app.get("/", (req, res) => {
   const blogs = [
-    {title: 'Yoshi finds eggs', snippet: 'Lorem ipsum dolor sit amet consectetur'},
-    {title: 'Mario finds stars', snippet: 'Lorem ipsum dolor sit amet consectetur'},
-    {title: 'How to defeat bowser', snippet: 'Lorem ipsum dolor sit amet consectetur'},
+    {
+      title: "Yoshi finds eggs",
+      snippet: "Lorem ipsum dolor sit amet consectetur",
+    },
+    {
+      title: "Mario finds stars",
+      snippet: "Lorem ipsum dolor sit amet consectetur",
+    },
+    {
+      title: "How to defeat bowser",
+      snippet: "Lorem ipsum dolor sit amet consectetur",
+    },
   ];
-  res.render('index', { title: 'Home', blogs });
+  res.render("index", { title: "Home", blogs });
 });
 
-app.get('/about', (req, res) => {
-  res.render('about', { title: 'About' });
+app.get("/about", (req, res) => {
+  res.render("about", { title: "About" });
 });
 
-app.get('/blogs/create', (req, res) => {
-  res.render('create', { title: 'Create a new blog' });
+app.get("/blogs/create", (req, res) => {
+  res.render("create", { title: "Create a new blog" });
 });
 
 // 404 page
 app.use((req, res) => {
-  res.status(404).render('404', { title: '404' });
+  res.status(404).render("404", { title: "404" });
 });
