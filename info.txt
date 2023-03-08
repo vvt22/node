@@ -1,0 +1,24 @@
+MIDDLEWARE:-
+Any kind of Code or Functons which runs(on the server) between 
+getting a request and sending a response.
+The use method is generally used to run some middleware code.
+we can have more than one piece of middleware
+even a GET handler is middleware 
+THE ORDER OF MIDDLEWARE IS VERY IMP AS IT RESPONSES BACK 
+
+MIDDLEWARE EXAMPLES:-
+LOGGER MIDDLEWARETO LOG DETAILS OF EVERY REQUEST
+AUTHENTICATION CHECK MIDDLEWARE FOR PROTECTED ROUTER
+MIDDLEWARE TO PARSE JSON DATA FROM REQUESTS
+RETURN 404 PAGES
+
+morgan:
+npm install morgan
+and in code:
+const morgan=require('morgan')
+
+
+Even we cant access CSS styles as the server protects our file automatically
+So we have to specify what file should be given access .
+there is a readymade middleware (static middleware)
+as: app.use(express.static('folder'))
