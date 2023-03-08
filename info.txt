@@ -1,0 +1,8 @@
+EXPRESS ROUTER AND MVC:-
+express router is used to manage all different route 
+check routes/blogRoutes
+
+MVC  MODEL VIEW CONTROLLER 
+MVC IS WAY OF STRUCTURING OUR CODES AND FILES 
+Keeps code more modular,reuable and easier to read 
+controller is thing that forms a link b/w our model and view
