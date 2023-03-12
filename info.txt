@@ -3,7 +3,7 @@ If you didn't find   "package-lock.json" file you can update it using this comma
 npm install --package-lock-only
 
 nodemon is live reload server
-PACKAGE fle is json file and keep track of any package we install locally to our project
+PACKAGE file is json file and keep track of any package we install locally to our project
 To create it use:npm init
 
 lodash is having many related methods
