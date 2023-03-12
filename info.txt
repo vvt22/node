@@ -11,3 +11,21 @@ so use as: npm install mongoose
 ERROR HANDLING:(when we not given a required field in form)
 //create a middleware for error handling 
 to access this created middleware use next in catch method 
+
+
+
+PUT METHOD:
+// update a ninja in the db
+router.put("/ninjas/:id", function (req, res, next) {
+  Ninja.findByIdAndUpdate({ _id: req.params.id }, req.body)
+    .then(function () {
+      Ninja.findOne({ _id: req.params.id }).then(function (ninja) {
+        res.send(ninja);
+      });
+    })
+    .catch(next);
+});
+// Ninja.findByIdAndUpdate({_id: req.params.id}, req.body, {new: true}).then(function(ninja){
+//   res.send(ninja);
+// });
+// even this works
