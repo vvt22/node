@@ -1,0 +1,6 @@
+models represent collections in mongodb
+schema represent structure of our data object
+MONGOOSE:adds a layer of methods to easily save,retrieve,edit and delete data froom mongodb
+allows us to create our models and schema easily
+so use as: npm install mongoose 
+//created a sep folder for our model
