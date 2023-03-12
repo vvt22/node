@@ -8,11 +8,13 @@ router.get("/ninjas", function (req, res) {
 });
 
 // add a new ninja to the db
-router.post("/ninjas", function (req, res) {
-  Ninja.create(req.body).then(function (ninja) {
-    //create=creating inst + saving the instance ...also it returns a promise
-    res.send(ninja);
-  });
+router.post("/ninjas", function (req, res, next) {
+  Ninja.create(req.body)
+    .then(function (ninja) {
+      //create=creating inst + saving the instance ...also it returns a promise
+      res.send(ninja);
+    })
+    .catch(next); //to call the next middleware
 });
 
 // update a ninja in the db
