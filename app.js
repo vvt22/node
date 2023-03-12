@@ -1,9 +1,12 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 //install as:npm install body ....is needed otherwise body is undefined
+const mongoose = require("mongoose");
 
 // set up express app
 const app = express();
+//connect to db
+mongoose.connect("mongodb://0.0.0.0:27017/ninjadb"); //connection to local storage
 
 // use body-parser middleware
 app.use(bodyParser.json());

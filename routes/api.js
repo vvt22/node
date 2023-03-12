@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const Ninja = require("../models/ninja"); //as it is in different folder
 
 // get a list of ninjas from the db
 router.get("/ninjas", function (req, res) {
@@ -8,12 +9,9 @@ router.get("/ninjas", function (req, res) {
 
 // add a new ninja to the db
 router.post("/ninjas", function (req, res) {
-  console.log("You made a POST request: ", req.body);
-  res.send({
-    type: "POST",
-    hi: "hello",
-    name: req.body.name,
-    rank: req.body.rank,
+  Ninja.create(req.body).then(function (ninja) {
+    //create=creating inst + saving the instance ...also it returns a promise
+    res.send(ninja);
   });
 });
 
