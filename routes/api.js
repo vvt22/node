@@ -30,7 +30,7 @@ router.put("/ninjas/:id", function (req, res, next) {
 // Ninja.findByIdAndUpdate({_id: req.params.id}, req.body, {new: true}).then(function(ninja){
 //   res.send(ninja);
 // });
-// even this works as substitute
+// even this works
 
 // delete a ninja from the db
 router.delete("/ninjas/:id", function (req, res, next) {
