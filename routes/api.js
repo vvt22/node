@@ -17,21 +17,6 @@ router.post("/ninjas", function (req, res, next) {
     .catch(next); //to call the next middleware
 });
 
-// update a ninja in the db
-router.put("/ninjas/:id", function (req, res, next) {
-  Ninja.findByIdAndUpdate({ _id: req.params.id }, req.body)
-    .then(function () {
-      Ninja.findOne({ _id: req.params.id }).then(function (ninja) {
-        res.send(ninja);
-      });
-    })
-    .catch(next);
-});
-// Ninja.findByIdAndUpdate({_id: req.params.id}, req.body, {new: true}).then(function(ninja){
-//   res.send(ninja);
-// });
-// even this works
-
 // delete a ninja from the db
 router.delete("/ninjas/:id", function (req, res, next) {
   Ninja.findByIdAndRemove({ _id: req.params.id })
