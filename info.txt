@@ -1,3 +1,5 @@
+IN THIS BRANCH HANDLED ERROR and DELETE 
+
 models represent collections in mongodb
 schema represent structure of our data object
 MONGOOSE:adds a layer of methods to easily save,retrieve,edit and delete data froom mongodb
